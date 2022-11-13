@@ -40,6 +40,6 @@ router.post("/webhook", (ctx) => {
 app.use(router.routes()).use(router.allowedMethods());
 
 app.listen(process.env["PORT"], () => {
-  console.log("bleatbot started!");
+  console.log("aonyxbot started!");
   handleAutomatic();
 });

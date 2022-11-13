@@ -5,8 +5,8 @@ export function handleIssueEvent(body: IssueCommentEvent) {
   if (body.action === "created") {
     const comment = body.comment.body;
 
-    if (comment.startsWith("@bleatbot")) {
-      const command = comment.replace("@bleatbot", "").trim();
+    if (comment.startsWith("@aonyxbot")) {
+      const command = comment.replace("@aonyxbot", "").trim();
       parseCommand(command, body);
     }
   }

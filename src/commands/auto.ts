@@ -13,7 +13,7 @@ enum AutomaticTaskType {
 }
 
 const alreadyHaveTask =
-  ":x: You already have an automatic task scheduled. Cancel it first with `@bleatbot cancel`.";
+  ":x: You already have an automatic task scheduled. Cancel it first with `@aonyxbot cancel`.";
 const notAuthorized = ":x: You aren't allowed to use this command.";
 
 async function checkIfHasTask(id: number) {
@@ -71,7 +71,7 @@ export async function autoCloseCommand(argv: yargs.ArgumentsCamelCase) {
 
   leaveComment(
     body,
-    `:white_check_mark: I'll close this **in ${closeAt}**. Cancel it with \`@bleatbot cancel\`.`
+    `:white_check_mark: I'll close this **in ${closeAt}**. Cancel it with \`@aonyxbot cancel\`.`
   );
 }
 
@@ -125,7 +125,7 @@ export async function autoMergeCommand(argv: yargs.ArgumentsCamelCase) {
 
   leaveComment(
     body,
-    `:white_check_mark: I'll merge this **in ${mergeAt}**. Cancel it with \`@bleatbot cancel\`.`
+    `:white_check_mark: I'll merge this **in ${mergeAt}**. Cancel it with \`@aonyxbot cancel\`.`
   );
 }
 
