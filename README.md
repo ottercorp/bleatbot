@@ -20,6 +20,6 @@ Upstream: https://github.com/goatcorp/bleatbot
 - `cp .env.example .env` and edit as required
 - create the webhooks pointing to aonyxbot `http://host:port/webhook` (all events is fine)
 - install dependencies: `pnpm i`
-- set up the database: `pnpm exec prisma generate`, `pnpm exec prisma migrate deploy`
-- compile the code: `pnpm exec tsc`
-- run the code: `node ./dist/index.js`
+- set up the database: `pnpm init`
+- build the code: `pnpm build`
+- run the code: `node ./dist/index.js` or `pm2 start ./dist/index.js -n bleatbot`

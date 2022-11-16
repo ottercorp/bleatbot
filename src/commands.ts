@@ -8,6 +8,7 @@ import {
   autoMergeCommand,
   cancelAutoCommand
 } from "./commands/auto";
+import rebuildCommand from "./commands/rebuild";
 
 const parser = yargs
   .command(
@@ -40,9 +41,11 @@ const parser = yargs
     },
     autoMergeCommand
   )
-  .command("cancel", false, () => {}, cancelAutoCommand);
+  .command("rebuild", false, () => { }, rebuildCommand)
+  .command("cancel", false, () => { }, cancelAutoCommand);
 
 export function parseCommand(comment: string, body: IssueCommentEvent) {
+  console.debug(`Parsing comment: ${comment}`);
   parser.parse(comment, { body }, (err) => {
     if (err) {
       leaveComment(
